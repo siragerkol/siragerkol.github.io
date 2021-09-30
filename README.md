@@ -1,3 +1,3 @@
 # siragerkol.github.io
 
-My homepage
+homepage
