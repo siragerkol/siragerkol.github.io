@@ -41,10 +41,10 @@ sections:
       title: News
       subtitle: ''
       text: |-
-        - **October 2026** — I will present *Second acts in scientific and creative careers* at the Conference on Complex Systems (CCS 2026).
+        - **October 2026** — I will present our work *Second acts in scientific and creative careers* at the Conference on Complex Systems (CCS 2026).
         - **July 2026** — Our paper [*Crowding controls the scaling of bus frequency with demand*](/publications/bus-frequency-scaling/) was published in PNAS.
-        - **June 2026** — I presented *Second acts in scientific and creative careers* at ICSSI 2026 in Boulder.
-        - **June 2026** — I presented *Second acts in scientific and creative careers* at NetSci 2026 in Boston.
+        - **June 2026** — I presented our work *Second acts in scientific and creative careers* at ICSSI 2026 in Boulder.
+        - **June 2026** — I presented our work *Second acts in scientific and creative careers* at NetSci 2026 in Boston.
     design:
       columns: '1'
 

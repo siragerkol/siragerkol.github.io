@@ -3,7 +3,7 @@
 #   The weight parameter defines the order in which the links appear.
 
 main:
-  - name: Bio
+  - name: Home
     url: /
     weight: 10
   - name: Publications

@@ -57,6 +57,16 @@
   z-index: 10;
 }
 
+/* Dark mode: the Minimal pack's grey scale makes the cards a mid-grey block. Use the pack's own
+   header surface instead (slightly lighter than the page) with a subtle border. */
+.dark .view-citation > div {
+  background-color: #161b22;
+  border-color: #30363d;
+}
+.dark .view-citation > div:hover {
+  border-color: #58a6ff;
+}
+
 /* Link buttons (DOI, arXiv, ...): underline only the label on hover, not the gap after the icon.
    The label span is added in layouts/_partials/page_links.html. */
 .hb-attachment-link:hover {
