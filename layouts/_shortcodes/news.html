@@ -1,0 +1,15 @@
+{{/* Site shortcode: renders the news items in data/news.yaml as a list, newest first.
+     `limit` shows only the first N items and, if there are more, adds a link to the full list on /news/.
+     Usage: {{< news limit=10 >}} on the homepage, {{< news >}} on the News page. */}}
+{{- $items := hugo.Data.news | default slice -}}
+{{- $limit := int (.Get "limit" | default 0) -}}
+{{- $shown := $items -}}
+{{- if and (gt $limit 0) (gt (len $items) $limit) }}{{ $shown = first $limit $items }}{{ end -}}
+<ul class="hb-news-list">
+  {{- range $shown }}
+  <li><strong>{{ .date }}</strong> — {{ .text | $.Page.RenderString }}</li>
+  {{- end }}
+</ul>
+{{- if lt (len $shown) (len $items) }}
+<p class="hb-news-more"><a href="{{ "news/" | relURL }}">See all news →</a></p>
+{{- end -}}

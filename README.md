@@ -12,7 +12,7 @@ Built with [Hugo](https://gohugo.io) and the [HugoBlox Academic CV](https://gith
 | Link-preview image (shown when the site is shared on LinkedIn, X, Slack) | `assets/media/sharing.png` (1200×630: the icon with the name underneath) |
 | CV PDF (CV menu tab and profile icon, both open in a new tab) | `static/uploads/cv.pdf` |
 | Homepage sections | `content/_index.md` |
-| News items | the `News` block in `content/_index.md` (one bullet per item, newest first) |
+| News items | `data/news.yaml` (add new items at the top). The homepage shows the 10 most recent; the full list is on `/news/` (rendered by `layouts/_shortcodes/news.html`) |
 | Publications (one folder per paper) | `content/publications/<paper>/index.md` |
 | Menu | `config/_default/menus.yaml` |
 | Colours, fonts, site name, description | `config/_default/params.yaml` |

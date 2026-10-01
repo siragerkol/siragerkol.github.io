@@ -1,10 +1,11 @@
 {{/* Site override of HugoBlox list.html: adds horizontal padding so list pages (e.g. Publications)
-     keep a margin on narrow screens. */}}
+     keep a margin on narrow screens; the title is the same size as on standalone pages (e.g. News)
+     instead of the theme's extra-large one. */}}
 {{ define "main" }}
 
 <div class="max-w-prose mx-auto flex justify-center px-4 sm:px-6">
   <article class="prose prose-slate lg:prose-xl dark:prose-invert">
-    <h1 class="lg:text-6xl">{{ .Title }}</h1>
+    <h1 class="hb-list-title">{{ .Title }}</h1>
     {{ .Content }}
   </article>
 </div>

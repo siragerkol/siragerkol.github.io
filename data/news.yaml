@@ -1,0 +1,15 @@
+# News items, newest first. Add new items at the top.
+# The homepage shows the 10 most recent; the full list is on /news/.
+# `text` is Markdown: *italics*, [link text](/publications/some-paper/).
+
+- date: October 2026
+  text: I will present our work *Second acts in scientific and creative careers* at the Conference on Complex Systems (CCS 2026).
+
+- date: July 2026
+  text: Our paper [*Crowding controls the scaling of bus frequency with demand*](/publications/bus-frequency-scaling/) was published in PNAS.
+
+- date: June 2026
+  text: I presented our work *Second acts in scientific and creative careers* at ICSSI 2026 in Boulder.
+
+- date: June 2026
+  text: I presented our work *Second acts in scientific and creative careers* at NetSci 2026 in Boston.

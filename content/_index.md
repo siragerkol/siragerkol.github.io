@@ -34,17 +34,14 @@ sections:
         size: medium # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
         shape: circle # Options: circle (default), square, rounded
 
-  # ── News: add new items at the top of the list. One line per item, newest first. ──
+  # ── News: the items live in data/news.yaml (add new ones at the top of that file). ──
+  # The homepage shows the 10 most recent, with a link to the full list on /news/ once there are more.
   - block: markdown
     id: news
     content:
       title: News
       subtitle: ''
-      text: |-
-        - **October 2026** — I will present our work *Second acts in scientific and creative careers* at the Conference on Complex Systems (CCS 2026).
-        - **July 2026** — Our paper [*Crowding controls the scaling of bus frequency with demand*](/publications/bus-frequency-scaling/) was published in PNAS.
-        - **June 2026** — I presented our work *Second acts in scientific and creative careers* at ICSSI 2026 in Boulder.
-        - **June 2026** — I presented our work *Second acts in scientific and creative careers* at NetSci 2026 in Boston.
+      text: '{{< news limit=10 >}}'
     design:
       columns: '1'
 

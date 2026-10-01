@@ -5,6 +5,39 @@
   max-width: 56rem;
 }
 
+/* Page titles of Publications and News: one shared size (3rem), between the theme's extra-large
+   list title and its smaller standalone-page title. The Publications class is set in layouts/list.html. */
+.prose > h1.hb-list-title,
+main:has(.hb-news-list) h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+}
+.prose > h1.hb-list-title {
+  margin-top: 1.5rem;
+}
+
+/* The News page (/news/): same column width as the News section on the homepage. */
+.prose:has(> .hb-news-list) {
+  max-width: 56rem;
+}
+/* Centred title, like the Publications page. */
+main:has(.hb-news-list) h1 {
+  text-align: center;
+}
+@media (min-width: 1280px) {
+  /* As on publication pages: drop the empty sidebar and table-of-contents columns, and centre
+     a 53rem text column (plus 3rem padding on each side). */
+  .page-body > div:has(.hb-news-list) > aside.hb-sidebar-container,
+  .page-body > div:has(.hb-news-list) > nav.hb-toc {
+    display: none;
+  }
+  main:has(.hb-news-list) {
+    max-width: 59rem;
+  }
+}
+
 /* Widen publication pages (abstract grid, metadata, prev/next links); the class is set in layouts/single.html. */
 .hb-pub-page .max-w-prose {
   max-width: 56rem;
