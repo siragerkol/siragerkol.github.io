@@ -1,0 +1,50 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# PROFILE — everything shown in the biography block on the homepage
+# Docs: https://docs.hugoblox.com/reference/author/
+# ─────────────────────────────────────────────────────────────────────────────
+schema: hugoblox/author/v1
+slug: me
+is_owner: true
+
+name:
+  display: Şirag Erkol
+  given: Şirag
+  family: Erkol
+
+role: Research Assistant Professor
+
+bio: |
+  I am a Research Assistant Professor at the [Center for Science of Science & Innovation](https://www.kellogg.northwestern.edu/academics-research/science-of-science/) at the Kellogg School of Management, Northwestern University, where I work with [Dashun Wang](https://www.dashunwang.com/).
+
+  My research focuses on how careers unfold and change direction, both within individual careers and across generations, and what these patterns reveal about success in science and creative fields. I also work on innovation, analyzing how research finds its way into inventions and start-ups.
+
+  My Ph.D. work focused on network science, specifically on optimization problems. I applied network approaches to questions ranging from identifying influential spreaders to optimal transport systems and the careers of scientists.
+
+affiliations:
+  - name: Northwestern University
+    url: https://www.northwestern.edu/
+
+# Icons: https://docs.hugoblox.com/reference/icons/
+links:
+  - icon: hero/envelope
+    url: 'mailto:siragerkol@gmail.com'
+    label: E-mail Me
+  - icon: academicons/google-scholar
+    url: 'https://scholar.google.com/citations?user=ST3YmXEAAAAJ&hl=en'
+  - icon: brands/github
+    url: 'https://github.com/siragerkol'
+  - icon: brands/linkedin
+    url: 'https://www.linkedin.com/in/siragerkol/'
+  - icon: brands/x
+    url: 'https://twitter.com/siragerkol'
+  - icon: academicons/cv
+    url: '/uploads/cv.pdf'
+    label: CV
+
+interests:
+  - Science of science
+  - Careers and mobility
+  - Innovation
+  - Computational social science
+  - Network science
+  - Data science

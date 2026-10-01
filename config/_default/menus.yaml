@@ -1,0 +1,16 @@
+# Navigation Links
+#   To link a homepage section, use `/#<section id>` where the id is set in content/_index.md.
+#   The weight parameter defines the order in which the links appear.
+
+main:
+  - name: Bio
+    url: /
+    weight: 10
+  - name: Publications
+    url: /publications/
+    weight: 20
+  - name: CV
+    url: /uploads/cv.pdf
+    weight: 40
+    params:
+      target: _blank

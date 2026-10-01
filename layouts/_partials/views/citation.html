@@ -1,0 +1,35 @@
+{{/* Site override of HugoBlox views/citation.html.
+     Each publication is a clickable card: title, then authors, then venue and link buttons.
+     On the Publications section page the cards are numbered in reverse (newest = highest). */}}
+{{ $item := .item }}
+{{ $year_value := $item.Params.event_start | default $item.Date }}
+{{ $year := (time $year_value).Format "2006" }}
+{{ $has_attachments := partial "functions/has_attachments" $item }}
+{{ $pub := partial "functions/resolve_publication.html" $item }}
+
+{{/* The section list (layouts/list.html) passes each paper as `page`; the homepage collection block passes
+     its block context instead. Only number the former. */}}
+{{ $number := "" }}
+{{ $kind := "" }}{{ with .page }}{{ with .Kind }}{{ $kind = . }}{{ end }}{{ end }}
+{{ if and (eq $kind "page") (isset . "index") .config.len }}
+  {{ $number = sub .config.len .index }}
+{{ end }}
+
+<div class="pub-list-item view-citation flex gap-3" style="margin-bottom: 1rem">
+  {{ if $number }}<span class="shrink-0 w-7 pt-4 text-right tabular-nums text-gray-500 dark:text-gray-400 select-none">{{ $number }}.</span>{{ end }}
+  <div class="relative min-w-0 flex-1 rounded-lg border border-gray-200 dark:border-gray-700 bg-white/70 dark:bg-gray-800/60 p-4 shadow-sm transition hover:shadow-md hover:border-primary-300 dark:hover:border-primary-700">
+    {{/* Stretched link: the title's ::after covers the whole card, so the card is clickable. */}}
+    <a href="{{ $item.RelPermalink }}" class="font-semibold text-lg leading-snug text-gray-900 dark:text-white no-underline hover:text-primary-700 dark:hover:text-primary-300 after:absolute after:inset-0 after:content-['']">{{ $item.Title }}</a>
+    <div class="mt-1 text-gray-700 dark:text-gray-300">
+      {{ partial "page_metadata_authors" $item }}
+    </div>
+    <div class="mt-1 text-sm text-gray-600 dark:text-gray-400">
+      {{ with $pub.display_short }}{{ . | markdownify }}{{ end }} ({{ $year }})
+    </div>
+    {{ if $has_attachments }}
+    <div class="mt-2 flex flex-wrap space-x-3">
+      {{ partial "page_links" (dict "page" $item "is_list" 1) }}
+    </div>
+    {{ end }}
+  </div>
+</div>
