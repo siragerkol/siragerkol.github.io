@@ -72,8 +72,10 @@
       </button>
     {{ else }}
       <a class="{{ $classes }}" href="{{ $url | safeURL }}" {{ $target | safeHTMLAttr }} {{ with $rel }}rel="{{ delimit . " " }}"{{ end }}>
-        {{- partial "functions/get_icon" (dict "name" (.icon | default "hero/link") "attributes" "style=\"height: 1em\" class='inline-block'") }}
-        {{ $label -}}
+        {{- /* No whitespace between icon and label: it would be underlined on hover. The gap is a CSS margin. */ -}}
+        {{- partial "functions/get_icon" (dict "name" (.icon | default "hero/link") "attributes" "style=\"height: 1em\" class='inline-block'") -}}
+        <span class="hb-attachment-label">{{ $label }}</span>
+      {{- /**/ -}}
       </a>
     {{ end }}
   {{ end }}

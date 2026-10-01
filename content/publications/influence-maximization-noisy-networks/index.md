@@ -11,7 +11,7 @@ date: '2018-10-05T00:00:00Z'
 publication_types: ['article-journal']
 
 publication:
-  name: 'EPL (Europhysics Letters)'
+  name: 'Europhysics Letters'
   short_name: 'EPL'
   volume: 123
   pages: '58007'

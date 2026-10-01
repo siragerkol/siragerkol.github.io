@@ -57,6 +57,18 @@
   z-index: 10;
 }
 
+/* Link buttons (DOI, arXiv, ...): underline only the label on hover, not the gap after the icon.
+   The label span is added in layouts/_partials/page_links.html. */
+.hb-attachment-link:hover {
+  text-decoration: none;
+}
+.hb-attachment-link .hb-attachment-label {
+  margin-left: 0.25em;
+}
+.hb-attachment-link:hover .hb-attachment-label {
+  text-decoration: underline;
+}
+
 /* Light-mode header: plain white instead of the default pack's blue-grey. Dark mode keeps the Minimal pack's header. */
 html:not(.dark) {
   --hb-color-header-bg: #f5f2f9; /* faint purple tint; use #ffffff for plain white */

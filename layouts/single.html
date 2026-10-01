@@ -1,7 +1,8 @@
 {{/* Site override of HugoBlox single.html: (1) publication pages get the `hb-pub-page` class on <main>
      for width tweaks in assets/css/custom.css; (2) the venue row is labelled by publication type
      (Journal / Institution / Published in) and shows only the venue name; (3) a comma always
-     separates author names in the header, with no gap before it; (4) publication dates show month and year. */}}
+     separates author names in the header, with no gap before it; (4) publication dates show month and year;
+     (5) the publication type is plain text (the /publication_types/ pages are not published). */}}
 {{ define "main" }}
 
 {{ $pub_type_csl := "" }}
@@ -252,13 +253,7 @@
         {{/* If the type is Uncategorized, hide the type. */}}
         {{ if $pub_type_display }}
           <div class="font-bold text-2xl">{{ i18n "publication_type" }}</div>
-          <div>
-            {{ if and .Params.publication_types (gt (len .Params.publication_types) 0) }}
-            <a href="{{ range first 1 (.GetTerms "publication_types") }}{{.RelPermalink}}{{end}}">
-            {{ $pub_type_display }}
-            </a>
-            {{ end }}
-          </div>
+          <div>{{ $pub_type_display }}</div>
         {{ end }}
 
         {{ if not $pub.is_empty }}
