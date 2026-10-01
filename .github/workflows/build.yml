@@ -82,7 +82,9 @@ jobs:
         # Install Tailwind CLI if package.json exists
         if [ -f "package.json" ]; then
           echo "Installing Tailwind dependencies..."
-          pnpm install --no-frozen-lockfile || npm install
+          # Use npm, not pnpm: Hugo rejects pnpm's shell-script shim for the
+          # tailwindcss binary ("is not a Node.js script")
+          npm ci
         fi
 
     - name: Verify Tailwind CSS dependency
