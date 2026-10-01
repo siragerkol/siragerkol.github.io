@@ -50,6 +50,11 @@
   }
 }
 
+/* Homepage "Latest Publications": the theme puts 5rem above the list; match the gap under "News". */
+#publications .container.mt-16 {
+  margin-top: 1.5rem;
+}
+
 /* Publication cards: the title's ::after stretches over the whole card to make it clickable;
    the link buttons are raised above that overlay so they keep their own targets. */
 .view-citation .hb-attachment-link {
