@@ -22,10 +22,11 @@ sections:
         education: 'Education'
         interests: 'Research Interests'
     design:
-      # Gradient mesh background that adapts to the selected theme colours
+      # Gradient mesh background in a neutral warm grey (no purple)
       background:
         gradient_mesh:
           enable: true
+          colors: ['stone-400/25', 'stone-300/20']
       # Name heading sizing to accommodate long or short names
       name:
         size: md # Options: xs, sm, md, lg (default), xl
